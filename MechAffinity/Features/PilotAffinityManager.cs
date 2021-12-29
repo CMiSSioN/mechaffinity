@@ -1192,6 +1192,7 @@ namespace MechAffinity
         {
             List<EffectData> effects;
             Dictionary<EAffinityType, int> bonuses;
+            if (this.dataManager == null) { this.dataManager = UnityGameInstance.BattleTechGame.DataManager; }
             if (actor.team == null || !actor.team.IsLocalPlayer)
             {
                 // actor isnt part of our team, check if their pilot defines a bonus
